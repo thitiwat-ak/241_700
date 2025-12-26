@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<style>
+    /*1. แต่งใคร *(แต่งid, class,dom)2.แต่งอะไร*/
+    @font-face {
+        font-family: 'Kanit';
+    
+        src: url('./Kanit/Kanit-Regular.ttf') format('truetype');
+    }
+    body {
+        background-color:saddlebrown ;
+        font-family: 'Kanit';
+    }
+    h1 {
+  color: white;
+  text-align: center;
+    }
+        #regis {
+            font-size: 40px;
+            color: red;
+        }
+        .input_name{
+            background-color: yellow;
+            border: 2px solid red
+        }
+       
+</style>
+   
+<body>
+    <h1 id="regis">Register</h1>
+    <h1 id="xxx">xxx</h1>
+    ชื่อ<input class="input_name" type="text" name="fname">
+    นามสกุล :<input  type="text" name="lname">
+    เพศ :
+    <input type="radio" name="gender" value="male">ชาย
+     <input type="radio" name="gender" value="female">หญิง
+     <br>
+     อายุ : <input type="number" name="age" min="0" max="120"> <br>
+     งานอดิเรกซ
+     <input type="checkbox" name="hobby" value="football">ฟุตบอล
+     <input type="checkbox" name="hobby" value="basketball">บาสเก็ตบอล
+     <input type="checkbox" name="hobby" value="reading">อ่านหนังสือ
+     <br>
+     รายละเอียดเพิ่มเติม<br>
+    <textarea name="details" row="5" cols="30"></textarea><br>
+    <input type="summit" value="Summit">
+</body>
+</html>
