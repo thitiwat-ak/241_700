@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ชื่อ :<input
+    id ="fname"
+    class="input"
+    type = "text"
+    name="fname"
+    value="ชื่อทดสอบ">
+    
+    ชื่อ :<input
+    id ="lname"
+    class="input"
+    type = "text"
+    name="lname"
+    value="นามสกุล">
+    
+    เบอร์โทร: <input
+    id="phone"
+    type="text"
+    name="phone"
+    value="06155555">
+    งานอดิเรก:
+    <input type="checkbox" name="'fname" value="ฟุตบอล">ฟุตบอล
+    <input type="checkbox" name="'fname" value="บาสเกตบอล">บาสเกตบอล
+    <input type="checkbox" name="'fname" value="ว่ายน้ำ">ว่ายน้ำ
+    <button onclick="userClick()">Click Me</button>
+    <div onclick="divClick()">Click div</div>
+    <input type = "radio" name="gender" value="male" onchange="changeGender()">Male  
+    <input type = "radio" name="gender" value="female" onchange="changeGender()">Female
+   <script>  
+        function changeGender(){
+            //เลือก gendeer ทั้งหมด ถึงค่าinput ออกมาก่อน
+            let genders = document.querySelectorAll('input[name="gender"]'); // ถ้าเราใส่checkเข้าไปที่inputสักตัวมันก็จะมีจุดดำๆ ใน male female
+            // ดูว่าอันไหนมันเช็ค ให้ดึงvalueนั้นออกมา เราต้องดูว่าตัวไหนมันเช็คอยู่เราก็จะดึงออกมา
+            //วิธีดูว่าอันไหนมีเช็คหรือไม่มีเช็ค   ต้องมีเงื่อนไข มีเช็คละก็ไม่มีเช็ค ต้องเป็นfor และก็มีif ซ้อนข้างใน
+            for(let i =0;i < genders.length;i++){
+                if(genders[i].checked){
+                    console.log("Gender selected: " + genders[i].value);
+                }
+            }
+        }
+        
+        
+        
+        /*function userClick(){
+            console.log("Button was clicked!")
+        } 
+        function divClick(){
+            console.log("Div was clicked!")
+        }
+        let inputs = document.getElementsByClassName('input'); // ChangeGender ข้างบนเป็นแบบ คาเมลเคส หรือแบบอูฐมักใช้เขียนโดยfunction เรียกว่าstandardCode
+        console.log(inputs); //2
+        for (let i = 0; i< inputs.length; i++){
+            console.log(inputs[i].value);
+        }
+       let inputs = document.querySelector('input[name = "fname"]');
+       console.log(inputs.value)
+
+       let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        console.log(checkboxes);
+        for (let i =0 ; i<checkboxes.length;i++){
+            console.log(checkboxes[i].value);
+        }*/
+
+    </script>
+</body>
+</html>
