@@ -102,7 +102,7 @@ app.get('/users/:id', async (req,res)=>{
     try{
         let id = req.params.id;
         const results =await conn.query('SELECT * FROM users WHERE id = ?',id);
-        if (result[0].length ===0){
+        if (results[0].length ===0){
             throw { statusCode:404, message: 'User not found' };
         }
         res.json(results[0][0]);
@@ -117,7 +117,7 @@ app.get('/users/:id', async (req,res)=>{
 })
 
 //path: = PUT /users/:id อัพเดทข้อมูล user ตาม รก
-app.put('/user/:id', async (req,res)=>{
+app.put('/users/:id', async (req,res)=>{
     try{
         let id = req.params.id;
         let updateUser = req.body;
